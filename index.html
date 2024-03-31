@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cineplex Movie Theater</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/logo-cover.png">
+</head>
+
+<body class="bg-dark">
+
+
+  <!-- Navigation bar  -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Image slide show -->
+  <div class="carousel-container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="carouselInner">
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Now showing  -->
+  <div class="container mt-5">
+    <h2 class="text-white mb-4">NOW SHOWING</h2>
+    <div class="row now-showing-row">
+      <!-- Movie cards will be dynamically added here -->
+    </div>
+  </div>
+
+
+  <!-- Upcoming movies  -->
+  <div class="container mt-5">
+    <h2 class="text-white mb-4">UPCOMING</h2>
+    <div class="row upcoming-movies-row">
+      <!-- Movie cards will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div id="footer-placeholder"></div>
+
+
+  <script src="js/scripts.js"></script>
+  <script src="js/movies.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

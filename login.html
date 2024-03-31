@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Cineplex Movie Theater</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/logo-cover.png">
+  <style>
+    /* CSS for background image */
+    .background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background-image: url('images/posters/bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: blur(15px);
+      z-index: -1;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body class="bg-dark">
+  <!-- Background blur effect -->
+  <div class="background"></div>
+
+  <!-- Add a margin to top -->
+  <div class="container-add-margin"></div>
+
+  <!-- Navigation bar -->
+  <div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid justify-content-center">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/logo-100.png" alt="Cinema Hall Logo" id="logon">
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Login form -->
+  <div class="container-fluid p-5 position-relative">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card bg-dark text-white border-0">
+          <div class="card-body">
+            <h2 class="text-center mb-4 main-c-t">Sign in</h2>
+            <form action="php/signin.php" method="post">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="email" placeholder="Email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password"
+                  required>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <!-- Checkbox to toggle password visibility -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="showpassword"
+                      onchange="togglePassword()">
+                    <label class="form-check-label" for="showpassword">
+                      Show Password
+                    </label>
+                  </div>
+                </div>
+                <div class="col text-end">
+                  <a href="#" class="main-c"></a>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary main-c-b btn-block">Sign in</button>
+            </form>
+            <div class="text-center mt-3">
+              <p>Don't have an account? <a href="registration.html" class="regster-link main-c">Sign up</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JavaScript -->
+  <script src="js/scripts.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    // Function to toggle password visibility
+    function togglePassword() {
+      var passwordField = document.getElementById("password");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+      } else {
+        passwordField.type = "password";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

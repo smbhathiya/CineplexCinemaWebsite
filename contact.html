@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Cineplex Movie Theater</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/logo-cover.png">
+  <style>
+    .background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background-image: url('images/posters/bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: blur(15px);
+      z-index: -1;
+      transform: translate(-50%, -50%)
+    }
+  </style>
+</head>
+
+<body class="bg-dark">
+  <div class="background"></div>
+
+  <!-- Navigation bar  -->
+  <div id="navbar-placeholder"></div>
+
+  <div class="container-add-margin"></div>
+
+  <!-- Contact form -->
+  <div class="container-fluid pt-3 pb-4">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card bg-dark text-white border-0">
+          <div class="card-body">
+            <h2 class="text-center mb-4 main-c-t">Contact Us</h2>
+            <form action="php/contactus.php" method="post">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="fullname" placeholder="Your Name" name="fullname" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" id="message" rows="5" placeholder="Your Message" name="message"
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary main-c-b btn-block ">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/scripts.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
